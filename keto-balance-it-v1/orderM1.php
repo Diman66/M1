@@ -3,63 +3,10 @@
 // /**
 //  * Базовая конфигурация
 //  */
-// // * Апи ключ вашего акканута
-// $apiKey = 'fce47a96fe5879e83a7783d84f126a04';
-// // * Домен проекта на который происходит отправка заказов
-// $domain = 'shakes.pro';
-// // Урл оригинального лендинга, необходим для корректого расчета Вашей статистики
-// $landingUrl = 'IT';
-// // * Идентификатор оффера на который вы льете
-// $offerId = '9685';
-// // Код потока заведенного в системе, если указан, статистика будет записываться на данный поток
-// $streamCode = '';
 // // Страница, отдаваемая при успешном заказе
 $successPage = 'success.html';
 // // Страница, отдаваемая в случае ошибки
 $errorPage = 'index.html';
-// /**
-//  * Формирование отправляемого заказа
-//  */
-// $url = "http://$domain?r=/api/order/in&key=$apiKey";
-// $order = [
-//     'countryCode' => (!empty($_POST['country']) ? $_POST['country'] : ($_GET['country'] ? $_GET['country'] : 'RU')),
-//     'comment' => (!empty($_POST['comment']) ? $_POST['comment'] : ($_GET['comment'] ? $_GET['comment'] : '')),
-//     'createdAt' => date('Y-m-d H:i:s'),
-//     'ip' => (!empty($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : null), // ip пользователя
-//     'landingUrl' => $landingUrl,
-//     'name' => (!empty($_POST['name']) ? $_POST['name'] : ($_GET['name'] ? $_GET['name'] : '')),
-//     'offerId' => $offerId,
-//     'phone' => (!empty($_POST['phone']) ? $_POST['phone'] : ($_GET['phone'] ? $_GET['phone'] : '')),
-//     'referrer' => (!empty($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null),
-//     'streamCode' => $streamCode,
-//     'sub1' => (!empty($_POST['sub1']) ? $_POST['sub1'] : ''),
-//     'sub2' => (!empty($_GET['sub2']) ? $_GET['sub2'] : ''),
-//     'sub3' => (!empty($_GET['sub3']) ? $_GET['sub3'] : ''),
-//     'sub4' => (!empty($_GET['sub4']) ? $_GET['sub4'] : ''),
-//     'userAgent' => (!empty($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '-'),
-// ];
-
-// /**
-//  * Отправка заказа
-//  */
-// /**
-//  * @see http://php.net/manual/ru/book.curl.php
-//  */
-// $curl = curl_init();
-// /**
-//  * @see http://php.net/manual/ru/function.curl-setopt.php
-//  */
-// curl_setopt($curl, CURLOPT_URL, $url);
-// curl_setopt($curl, CURLOPT_POST, true);
-// curl_setopt($curl, CURLOPT_POSTFIELDS, $order);
-// curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-// curl_setopt($curl, CURLOPT_USERAGENT, 'curl/' . (curl_version()['version'] ?? '7'));
-// /**
-//  * @see http://php.net/manual/ru/language.exceptions.php
-//  */
-
-
-
 
 $url = 'http://m1.top/send_order/';
 $data = [
