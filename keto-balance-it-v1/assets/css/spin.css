@@ -54,11 +54,11 @@ input[value="Получить бесплатно"]:active {
     margin-bottom: 10px;
     max-width: 400px;
     width: 100% !important;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     border: 1px solid grey;
     outline: 0
 }
@@ -70,11 +70,11 @@ input[value="Получить бесплатно"]:active {
         margin-bottom: 10px;
         max-width: 280px;
         width: 100% !important;
-        border-radius: 15px;
-        -webkit-border-radius: 15px;
-        -moz-border-radius: 15px;
-        -ms-border-radius: 15px;
-        -o-border-radius: 15px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
         border: 1px solid grey;
         outline: 0
     }
