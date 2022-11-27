@@ -3946,7 +3946,7 @@ a {
 }
 
 .best-form > .wrap {
-    max-width: 310px;
+    /* max-width: 310px; */
     margin: 0 auto
 }
 
@@ -4192,10 +4192,10 @@ input:focus-within {
     text-shadow: 0 0 4px #e3c72e
 }
 
-.pop-price::before {
+.pop-prod::before {
     position: absolute;
-    left: 16px;
-    top: -60px;
+    left: 20%;
+    top: 80px;
     content: ' ';
     background: url("50sale.png") no-repeat;
     width: 120px;
@@ -4209,6 +4209,12 @@ input:focus-within {
 }
 
 .pop-prod, .pop-price {
+    position: relative;
+    flex: 1 50%;
+    text-align: center;
+    margin: auto
+}
+.pop-prod-quality {
     position: relative;
     flex: 1 50%;
     text-align: center;

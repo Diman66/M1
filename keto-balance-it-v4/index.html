@@ -8,29 +8,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>&gt;La Dr.ssa Debora Rasio, nutrizionista - ha rivelato la verità sul popolare farmaco Keto Balance - RaiPlay
     </title>
-    <script>
-        var date = new Date();
-        date.setTime(date.getTime() + (5 * 24 * 60 * 60 * 1000));
-         console.log("pixel is " + "{pxl}");
-          if (!'{pxl}'.match('{')) {
-         
-          document.cookie = "pxl={pxl}; " + "expires=" + date.toUTCString() + "";
-        }
-    </script> 
-    <script type="text/javascript" src="./js/jquery.js"></script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="app.css" media="all">
     <link rel="stylesheet" type="text/css" href="bs.css" media="all">
     <link rel="stylesheet" type="text/css" href="index.css" media="all">
     <link rel="stylesheet" type="text/css" href="timeto.css" media="all">
     <link rel="stylesheet" href="generator.css">
-
-
-
-
-
-
-
 
     <script>
         function fdateTwoDigits(d) {
@@ -43,6 +27,79 @@
             document.write(" " + day + "." + mm + "." + now.getFullYear() + " ");
         }
     </script>
+<style>
+/* .form {
+    display: inline-block;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+  } */
+
+  .form .order_offer {
+      text-align: center;
+  }
+
+  .form__field {
+    margin-bottom: 10px;
+  }
+
+  .form__error {
+    color: red;
+    text-align: left;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+    display: none;
+  }
+
+  .form input {
+    /* outline: none;
+    display: block;
+    width: 100%; */
+    border-radius: 3px;
+    /* border: 2px solid #ccc; */
+    padding: 10px;
+    /* box-sizing: border-box; */
+  }
+
+  .form button {
+    /* width: 100%; */
+    box-shadow: 0 1px 0 0 #f5978e inset;
+    background: #f24537;
+    border-radius: 3px;
+    border: 1px solid #d02718;
+    /* width: 100%; */
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    outline: none;
+    padding: 8px 0px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 5px;
+    text-decoration: none;
+    letter-spacing: .6px;
+    text-shadow: 0 1px 0 #810e05;
+  }
+
+  .form button:hover {
+      background: #c62d1f;
+  }
+
+  .form input:valid:not(:placeholder-shown) {
+    border-color: green;
+  }
+
+  .form input:invalid:not(:placeholder-shown):not(:focus) {
+    border-color: red;
+  }
+  .form input:invalid:not(:placeholder-shown) + .form__error {
+    display: block;
+  }
+
+</style>
 
 </head>
 
@@ -277,7 +334,10 @@
 
                                         <div class="">
                                             <div class="pop-prod">
-                                                <img src="product.png" width="140" alt="">
+                                                <img src="product.png" alt="">
+                                            </div>
+                                            <div class="pop-prod-quality" style="margin: 20px 0">
+                                                <img src="quality.png" alt="">
                                             </div>
                                             <div class="pop-price">
                                                 <div class="price-bottom">
@@ -288,19 +348,28 @@
                                     </div>
 
                                     <div>
-                                        <form action="orderM1.php" method="POST">
-                                            <div class="name-input">
-                                                <select id="country" name="country"><option value="IT" selected="selected">Italy</option></select>
-                                            </div>
+                                        <form action="../../apis/m1.php" method="POST" >
+                                            
+                                            <input type="hidden" name="offer_id" value="966870">
+                                            <input type="hidden" name="offer_name" value="Keto Balance">
+                                            <input type="hidden" name="country_static" value="IT">
+                                            <input type="hidden" name="vertical" value="adult">
+                                            <input type="hidden" name="subid" value="{subid}">
+                                            <input type="hidden" name="buyer" value="{buyer}">
+                                            <input type="hidden" name="" value="{}">
+                                            <input type="hidden" name="pixel" value="{pixel}">
+                                            <input type="hidden" name="country" value="{country}">
+                                            <input type="hidden" name="region" value="{region}">
+                                            <input type="hidden" name="city" value="{city}">
+                                            <input type="hidden" name="language" value="{language}">
 
                                             <div class="name-input">
                                                 <label for="name-input">Inserisci il tuo nome:</label>
-                                                <input id="name-input" type="text" placeholder="nome" name="name" class="ym-record-keys" autocomplete="off" required="" value="">
+                                                <input id="name-input" type="text" placeholder="nome" name="name" class="ym-record-keys" autocomplete="off" required value="">
                                             </div>
                                             <div class="phone-input">
                                                 <label for="phone-input">Il tuo numero di telefono:</label>
-                                                <input id="phone-input" type="tel" placeholder="+39 312 345 6789" name="phone" minlength="9" maxlength="13" class="ym-record-keys" autocomplete="off" required="" value="">
-                                                    <input type="hidden" name="subid" value="{subid}">
+                                                <input id="phone-input" type="tel" placeholder="39000000000" name="phone" minlength="9" maxlength="13" class="ym-record-keys" autocomplete="off" pattern="[\d]{5,15}" title="il telefono deve contenere solo da 12 a 17 cifre" oninput="this.value=this.value.replace(/[^0-9.]/g, '');" required>
                                                     
                                             </div>
                                             <button type="submit" class="button-submit">
@@ -322,7 +391,7 @@
                                     (compreso)
                                 </h2>
                             </div>
-                            <hr style="border: #cc0000 1px solid;">
+                           
 
                         </div>
                         <div class="content-note" itemprop="text">
@@ -1341,73 +1410,7 @@
     </div>
 
 
-
-
-
     <div id="userdata_el" style="visibility: hidden; position: absolute;"></div>
 
-
-
-    <!-- <div class="demon_popup" style="display: block;">
-        <div class="demon_overflow" id="pop-up-disappear"></div>
-        <div class="demon_popup_body">
-            <span class="demon_close"></span>
-            <h4 class="demon_popup_title">Vieni DALL'ITALIA? Aspettare!</h4>
-            <img alt="" src="product.png" style="width:28%">
-            <p>C'è ancora un'offerta speciale limitata per te</p>
-            <p>
-                Affrettati a prendere parte al programma e ottieni un "Keto Balance" per la promozione
-                per
-                <span style="color:#fff !important">!</span>
-            </p>
-            <a class="popup_btn to_form" href="#order_form">Per saperne di più</a>
-        </div>
-    </div> -->
-
-
-    
-
-
-    <script>
-        $('a').not('.link').addClass('to_form');
-
-        $(".to_form").on("touchend, click", function (e) {
-            e.preventDefault();
-            $('body,html').animate({
-                scrollTop: $('#order_form').offset().top - 75
-            }, 700);
-        });
-    </script>
-
-
-
-    <script>
-        function randomSecond(min, max) {
-            let rand = min - 0.5 + Math.random() * (max - min + 1);
-            rand = Math.round(rand) * 1000;
-            return rand;
-        }
-
-        function setStock(item) {
-            let stockElements = document.getElementsByClassName('left-pack');
-            for (let i = 0; i < stockElements.length; i++) {
-                stockElements[i].innerHTML = item.toString();
-            }
-        }
-
-        let currentStock;
-        currentStock = 43;
-        setStock(currentStock);
-        let interval = setInterval(function () {
-            setStock(currentStock);
-            localStorage.setItem('stock', currentStock);
-            if (currentStock <= 7) {
-                clearInterval(interval);
-            } else {
-                currentStock -= 1;
-            }
-        }, randomSecond(2, 5));
-    </script>
-    
 
 </body></html>
