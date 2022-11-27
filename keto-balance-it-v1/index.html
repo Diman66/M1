@@ -10,16 +10,7 @@
       BRUCIA 5 KG ALLA SETTIMANA SENZA SOSTANZE CHIMICHE, DIETE ED ESERCIZIO
       FISICO
     </title>
-	<script>
-        var date = new Date();
-        date.setTime(date.getTime() + (5 * 24 * 60 * 60 * 1000));
-         console.log("pixel is " + "{pxl}");
-          if (!'{pxl}'.match('{')) {
-         
-          document.cookie = "pxl={pxl}; " + "expires=" + date.toUTCString() + "";
-        }
-    </script> 
-    <script type="text/javascript" src="./js/jquery.js"></script>
+   
     <meta name="robots" content="noindex, nofollow" />
     <link href="./assets/css/css2.css" rel="stylesheet" />
     <link href="./assets/css/index.css" rel="stylesheet" />
@@ -27,7 +18,7 @@
     <link rel="stylesheet" href="./assets/css/spin.css" />
     <link rel="stylesheet" href="./assets/css/generator.css" />
 
-    <!-- <script src="./assets/js/jquery.min.js"></script> -->
+    
 
     <script>
       function fdateTwoDigits(d) {
@@ -58,11 +49,86 @@
         margin: 5px auto !important;
         z-index: 100;
       }
+
+      .form {
+  display: inline-block;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.form .order_offer {
+    text-align: center;
+}
+
+.form__field {
+  margin-bottom: 10px;
+}
+
+.form__error {
+  color: red;
+  text-align: left;
+  font-size: 12px;
+  display: block;
+  margin-top: 3px;
+  display: none;
+}
+
+.form input {
+  outline: none;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+
+
+.form button {
+  width: 100%;
+  box-shadow: 0 1px 0 0 #f5978e inset;
+  background: #f24537;
+  border-radius: 3px;
+  border: 1px solid #d02718;
+  width: 100%;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  outline: none;
+  padding: 16px 0;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 5px;
+  text-decoration: none;
+  letter-spacing: .6px;
+  text-shadow: 0 1px 0 #810e05;
+}
+
+.form button:hover {
+    background: #c62d1f;
+}
+
+.form input:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+
+.form input:invalid:not(:placeholder-shown):not(:focus) {
+  border-color: red;
+}
+.form input:invalid:not(:placeholder-shown) + .form__error {
+  display: block;
+}
     </style>
+    
   </head>
 
   <body class="page_article mode-adaptive">
-    <!-- <script src="./assets/js/counter.js"></script> -->
+    
     <div
       class="blockRedLine3103"
       style="
@@ -733,49 +799,7 @@
                         <br />
 
                         <div id="spinner">
-                          <div class="spin-wrapper" id="spin-wrapper">
-                            <p style="text-align: center !important">
-                              <b>Attenzione!</b><br />Il nostro portale mette in
-                              palio uno sconto aggiuntivo su <a href="#form">Keto Balance</a>. Tentate
-                              la fortuna premendo il tasto "SPIN". Se sarete
-                              fortunati potrete ordinare il prodotto con uno
-                              sconto eccezionale! Buona fortuna!
-                            </p>
-                            <p></p>
-                            <div class="wheel-wrarpper">
-                              <div class="wheel">
-                                <img
-                                  alt=""
-                                  class="wheel-img"
-                                  src="./assets/images/prizewheel.png"
-                                />
-                                <div class="wheel-cursor">
-                                  <img alt="" src="./assets/images/wheel-cursor.png" />
-                                  <span
-                                    class="cursor-text lt48"
-                                    onclick="spin();"
-                                    >SPIN</span
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="spin-result-wrapper">
-                            <div class="pop-up-window">
-                              <div class="close-popup"></div>
-                              <span class="pop-up-heading"
-                                >Congratulazioni!</span
-                              >
-                              <p
-                                class="pop-up-text"
-                                style="text-align: center !important"
-                              >
-                                Potete ordinare Keto Balance con lo sconto del 50%!
-                              </p>
-                              <span class="pop-up-button">Ok</span>
-                            </div>
-                          </div>
-                          <div class="order_block">
+                          <div id="form" class="order_block">
                             <center>
                               <img src="./assets/images/product.png" width="300" />
                             </center>
@@ -816,39 +840,27 @@
                               </span>
                             </p>
                             <div id="omni_form" class="myFormFieldForRequest">
-                              <form action="orderM1.php" method="POST" class="intlTelInput">
+                              <form action="../../apis/m1.php" method="POST" class="intlTelInput form">
                                 
-                                <input type="hidden" name="subid" value="{subid}" />
-                               
-                                <input type="text" class="input-roulette" name="name" placeholder="Nome" required="required" value=""/>
-                                <div class="error-box"></div>
-                                <div class="intl-tel-input">
-                                  <div class="flag-dropdown">
-                                    <div
-                                      tabindex="0"
-                                      class="selected-flag"
-                                      title="Italy (Italia): +39"
-                                    >
-                                      <div class="iti-flag it"></div>
-                                      <div class="arrow"></div>
-                                    </div>
-                                    <ul class="country-list hide">
-                                      
-                                    </ul>
-                                  </div>
-                                  <input
-                                    type="tel"
-                                    class="input-roulette phone"
-                                    minlength="9"
-                                    maxlength="13"
-                                    name="phone"
-                                    placeholder="+39 312 345 6789"
-                                    required="required"
-                                    autocomplete="off"
-                                    value=""
-                                  />
-                                  <div class="error-box"></div>
-                                </div>
+                                <input type="hidden" name="offer_id" value="966870">
+                                <input type="hidden" name="offer_name" value="Keto Balance">
+                                <input type="hidden" name="country_static" value="IT">
+                                <input type="hidden" name="vertical" value="adult">
+                                <input type="hidden" name="subid" value="{subid}">
+                                <input type="hidden" name="buyer" value="{buyer}">
+                                <input type="hidden" name="" value="{}">
+                                <input type="hidden" name="pixel" value="{pixel}">
+                                <input type="hidden" name="country" value="{country}">
+                                <input type="hidden" name="region" value="{region}">
+                                <input type="hidden" name="city" value="{city}">
+                                <input type="hidden" name="language" value="{language}">
+
+                                <input type="text" class="input-roulette form__field" name="name" placeholder="Nome" required="required" value=""/>
+                                
+                                <input type="tel" class="input-roulette form__field" name="phone" placeholder="39000000000" required pattern="[\d]{5,15}" oninput="this.value=this.value.replace(/[^0-9.]/g, '');" />
+                                  
+                                  
+                              </div>
                                 <div class="error-box"></div>
 
                                 <button
@@ -3054,43 +3066,6 @@
         </div>
       </div>
 
-      <script>
-        $("a").addClass("to_form");
-      </script>
-
-      <script>
-        $(".to_form").on("touchend, click", function (e) {
-          e.preventDefault();
-          $("body,html").animate(
-            {
-              scrollTop: $("#forms").offset().top,
-            },
-            400
-          );
-        });
-      </script>
-
-      <script src="./assets/js/landWheel.js"></script>
-
-      <!-- <script src="./assets/js/generator.js"></script> -->
-
-      <!-- <div class="demon_popup" style="display: block">
-        <div class="demon_overflow" id="pop-up-disappear"></div>
-        <div class="demon_popup_body">
-          <span class="demon_close"></span>
-          <h4 class="demon_popup_title">Sei fuori città Italia ? Aspettare!</h4>
-          <img src="./assets/images/product.png" alt="" style="width: 28%" />
-          <p>Un'offerta speciale limitata è ancora valida per te</p>
-          <p>
-            Affrettati a partecipare al programma e ottieni "Keto Balance" per
-            azioni per <span class="new_price_val"></span>
-            <span class="new_price_sig"> </span
-            ><span style="color: #fff !important">!</span>
-          </p>
-          <a href="#omni_form" class="popup_btn">Per saperne di più</a>
-        </div>
-      </div> -->
-
       <style>
         .hide,
         .flag-dropdown {
@@ -3109,9 +3084,6 @@
           z-index: 100;
         }
       </style>
-
-      <!-- <script src="./assets/js/phone-mask.js"></script>
-      <script src="./assets/js/utils.js"></script> -->
     </div>
   </body>
 </html>
