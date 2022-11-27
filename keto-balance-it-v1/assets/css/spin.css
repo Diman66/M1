@@ -54,12 +54,13 @@ input[value="Получить бесплатно"]:active {
     margin-bottom: 10px;
     max-width: 400px;
     width: 100% !important;
+    border: 1px solid grey;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-    border: 1px solid grey;
+    
     outline: 0
 }
 
@@ -126,7 +127,7 @@ input[placeholder="Ваше имя"] {
     box-shadow: 0 0 10px;
     border: 3px solid red;
     padding: 20px 7px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     text-align: center;
     box-sizing: border-box
 }
