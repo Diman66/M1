@@ -9,7 +9,9 @@
     background: red;
     color: #fff;
     font-weight: 700;
-    transition: background .3s
+    transition: background .3s;
+    width: 100% !important;
+    max-width: 400px;
 }
 
 .submit-roulette:hover {
@@ -201,9 +203,9 @@ input[placeholder="Ваше имя"] {
 }
 
 .order_block img {
-    width: 100%;
+    /* width: 100%; */
     margin-bottom: 50px;
-    max-width: 350px
+    max-width: 100%
 }
 
 .order_block h3 {
