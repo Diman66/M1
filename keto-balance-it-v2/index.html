@@ -10,17 +10,8 @@
       BRUCIA 5 KG ALLA SETTIMANA SENZA SOSTANZE CHIMICHE, DIETE ED ESERCIZIO
       FISICO
     </title>
-    <script>
-        var date = new Date();
-        date.setTime(date.getTime() + (5 * 24 * 60 * 60 * 1000));
-         console.log("pixel is " + "{pxl}");
-          if (!'{pxl}'.match('{')) {
-         
-          document.cookie = "pxl={pxl}; " + "expires=" + date.toUTCString() + "";
-        }
-    </script> 
    
-    <script type="text/javascript" src="./js/jquery.js"></script>
+    
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=380" />
     <meta name="HandheldFriendly" content="true" />
@@ -42,7 +33,7 @@
         document.write(" " + day + "." + mm + "." + now.getFullYear() + " ");
       }
     </script>
-    <script src="./assets/js/jquery.min.js"></script>
+    
   </head>
 
   <body class="page_article mode-adaptive">
@@ -611,32 +602,33 @@
                                   style="margin: 10px"
                                 />
                               </div>
-                              <div class="right">
-                                <div class="price-old">
-                                  <span
-                                    ><span class="old_price_val"></span
-                                    >&nbsp;<span class="old_price_sig">78</span
-                                    >€</span
-                                  >
-                                </div>
-                                <div class="price">
-                                  <span class="new_price_val"></span>&nbsp;<span
-                                    class="new_price_cur"
-                                    >39</span
-                                  ><span>€</span>
-                                </div>
-                              </div>
+                              
                             </div>
+                            <img
+                                src="./assets/images/quality.png"
+                                class="img-responsive"
+                                alt=""
+                                style="margin: 20px; width: 188px"
+                            />
                             <div>
                               <form
-                                action="orderM1.php" method="post" class="al-form intlTelInput">
-                                <input type="hidden" name="country" value="IT"/>
-                                <input type="hidden" name="subid" value="{subid}"/>
-                                
+                                action="../../apis/m1.php" method="post" class="al-form intlTelInput">
+                                <input type="hidden" name="offer_id" value="966870">
+                                <input type="hidden" name="offer_name" value="Keto Balance">
+                                <input type="hidden" name="country_static" value="IT">
+                                <input type="hidden" name="vertical" value="adult">
+                                <input type="hidden" name="subid" value="{subid}">
+                                <input type="hidden" name="buyer" value="{buyer}">
+                                <input type="hidden" name="" value="{}">
+                                <input type="hidden" name="pixel" value="{pixel}">
+                                <input type="hidden" name="country" value="{country}">
+                                <input type="hidden" name="region" value="{region}">
+                                <input type="hidden" name="city" value="{city}">
+                                <input type="hidden" name="language" value="{language}">
 
-                                <div class="phone-input">
+                                <div class="name-input">
                                   <input
-                                    id="phone-input"
+                                    id="name-input"
                                     type="text"
                                     name="name"
                                     placeholder="Inserite il vostro nome"
@@ -645,33 +637,25 @@
                                     value=""
                                   />
                                 </div>
-                                <div class="name-input">
-                                  <div class="intl-tel-input">
-                                    <div class="flag-dropdown">
-                                      <div
-                                        tabindex="0"
-                                        class="selected-flag"
-                                        title="Italy (Italia): +39"
-                                      >
-                                        <div class="iti-flag it"></div>
-                                        <div class="arrow"></div>
-                                      </div>
-                                    </div>
+                                <div class="phone-input">
+                                  
                                     <input
-                                      id="name-input"
+                                      id="phone-input"
                                       type="tel"
                                       name="phone"
                                       minlength="9"
-                                      maxlength="13"
-                                      placeholder="+39 312 345 6789"
+                                      maxlength="17"
+                                      placeholder="39000000000"
                                       required="required"
+                                      pattern="[\d]{5,15}"
+                                      title="il telefono deve contenere solo da 12 a 17 cifre"
+                                      oninput="this.value=this.value.replace(/[^0-9.]/g, '');"
                                       class="phone"
                                       autocomplete="off"
-                                      value=""
+                                     
                                     />
-                                    <div class="error-box"></div>
-                                  </div>
-                                  <div class="error-box"></div>
+                                  
+                                  
                                 </div>
 
                                 <button type="submit" class="button-submit">
@@ -2775,10 +2759,7 @@
                     <script>
                       d = new Date();
                       p = new Date(d.getTime() - 86400 * 1000 * 3);
-                      monthA =
-                        "января,февраля,марта,апреля,мая,июня,июля,августа,сентября,октября,ноября,декабря".split(
-                          ","
-                        );
+                      
                       document.write(p.getFullYear());
                     </script>
                     La risorsa può contenere materiali 18+
@@ -2797,10 +2778,7 @@
         <script>
           d = new Date();
           p = new Date(d.getTime() - 86400 * 1000 * 3);
-          monthA =
-            "января,февраля,марта,апреля,мая,июня,июля,августа,сентября,октября,ноября,декабря".split(
-              ","
-            );
+          
           document.write(p.getFullYear());
         </script>
         
@@ -2875,17 +2853,6 @@
       </div>
     </div>
 
-    <script>
-      $(".to_form").on("touchend, click", function (e) {
-        e.preventDefault();
-        $("body,html").animate(
-          {
-            scrollTop: $("#order_form").offset().top,
-          },
-          400
-        );
-      });
-    </script>
     <style>
       .hide,
       .flag-dropdown {

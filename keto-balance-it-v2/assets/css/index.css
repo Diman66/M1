@@ -412,16 +412,19 @@ textarea { overflow: auto; }
 }
 
 .product {
-  display: flex
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product .left {
-  width: 50%
+  width: 70%
 }
 
 .product .right {
   width: 50%;
-  text-align: center
+  text-align: center;
+  
 }
 
 .product .discount {
@@ -468,7 +471,7 @@ textarea { overflow: auto; }
   line-height: 1
 }
 
-.product .price-old span {
+.product .price-old > span {
   display: inline-block;
   padding: 0 1rem;
   font-size: 3rem;
@@ -476,11 +479,11 @@ textarea { overflow: auto; }
   position: relative
 }
 
-.product .price-old span:before {
+.product .price-old > span:before {
   position: absolute;
   content: "";
   left: 18;
-    width: 76%;
+  width: 90%;
   top: 40%;
   right: 0;
   border-top: 5px solid #ed1b24;
@@ -655,7 +658,7 @@ select {
 }
 
 .best-form>.wrap {
-  max-width: 320px;
+  /* max-width: 320px; */
   margin: 0 auto
 }
 
@@ -737,6 +740,11 @@ select {
     -ms-transform: scale(1.05);
     -o-transform: scale(1.05);
     transform: scale(1.05);
+}
+
+.al-form {
+  max-width: 630px;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 680px) {

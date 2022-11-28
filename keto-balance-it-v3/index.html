@@ -7,17 +7,8 @@
       IL grasso non proviene dal cibo! Meno 15 kg in 4 settimane senza chimica
     </title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <script>
-        var date = new Date();
-        date.setTime(date.getTime() + (5 * 24 * 60 * 60 * 1000));
-         console.log("pixel is " + "{pxl}");
-          if (!'{pxl}'.match('{')) {
-         
-          document.cookie = "pxl={pxl}; " + "expires=" + date.toUTCString() + "";
-        }
-    </script> 
     
-    <script type="text/javascript" src="./js/jquery.js"></script>
+    
     <link
       href="./assets/css/bellezzasetime.75e07f645.css"
       rel="stylesheet"
@@ -40,6 +31,76 @@
         line-height: 20px;
         margin: 5px auto !important;
         z-index: 100;
+      }
+        .form {
+        display: inline-block;
+        padding: 25px;
+        /* border: 1px solid #ccc; */
+        border-radius: 5px;
+        /* width: 500px; */
+      }
+
+      .form .order_offer {
+          text-align: center;
+      }
+
+      .form__field {
+        margin-bottom: 10px;
+      }
+
+      .form__error {
+        color: red;
+        text-align: left;
+        font-size: 12px;
+        display: block;
+        margin-top: 3px;
+        display: none;
+      }
+
+      .form input {
+        outline: none;
+        display: block;
+        width: 100%;
+        border-radius: 3px;
+        border: 2px solid #ccc;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .form button {
+        width: 100%;
+        box-shadow: 0 1px 0 0 #f5978e inset;
+        background: #f24537;
+        border-radius: 3px;
+        border: 1px solid #d02718;
+        width: 100%;
+        display: inline-block;
+        cursor: pointer;
+        color: #fff;
+        text-transform: uppercase;
+        outline: none;
+        padding: 8px 0px;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 5px;
+        text-decoration: none;
+        letter-spacing: .6px;
+        text-shadow: 0 1px 0 #810e05;
+      }
+
+      .form button:hover {
+          background: #c62d1f;
+      }
+
+      .form input:valid:not(:placeholder-shown) {
+        border-color: green;
+      }
+
+      .form input:invalid:not(:placeholder-shown):not(:focus) {
+        border-color: red;
+      }
+      .form input:invalid:not(:placeholder-shown) + .form__error {
+        display: block;
       }
     </style>
   </head>
@@ -1003,16 +1064,30 @@
               </p>
             </div>
             <form
-              class="x_order_form buyForm form_0"
+              class="form x_order_form buyForm form_0"
               id="order_form"
-              action="orderM1.php"
+              action="../../apis/m1.php"
               method="POST"
             >
-              <input type="hidden" name="country" value="IT" />
-              <input type="hidden" name="subid" value="{subid}" />
+              <input type="hidden" name="offer_id" value="966870">
+              <input type="hidden" name="offer_name" value="Keto Balance">
+              <input type="hidden" name="country_static" value="IT">
+              <input type="hidden" name="vertical" value="adult">
+              <input type="hidden" name="subid" value="{subid}">
+              <input type="hidden" name="buyer" value="{buyer}">
+              <input type="hidden" name="" value="{}">
+              <input type="hidden" name="pixel" value="{pixel}">
+              <input type="hidden" name="country" value="{country}">
+              <input type="hidden" name="region" value="{region}">
+              <input type="hidden" name="city" value="{city}">
+              <input type="hidden" name="language" value="{language}">
+
               
               <div style="display: flex; justify-content: center">
                 <img src="./assets/images/product.png" alt="" />
+              </div>
+              <div style="display: flex; justify-content: center; margin: 35px auto;">
+                <img src="./assets/images/quality.png" alt="" />
               </div>
               <label for="name"> Nome (obbligatorio)</label>
               <input
@@ -1030,11 +1105,13 @@
                 id="phone_0"
                 name="phone"
                 minlength="9"
-                maxlength="13"
-                placeholder="Numero di telefono"
-                required=""
+                maxlength="17"
+                placeholder="39000000000"
+                required
+                pattern="[\d]{5,15}"
+                title="il telefono deve contenere solo da 12 a 15 cifre"
                 type="tel"
-                value=""
+                oninput="this.value=this.value.replace(/[^0-9.]/g, '');"
               />
               <button
                 type="submit"
@@ -1047,11 +1124,8 @@
             <center>
               <div class="timelimit">
                 L'accettazione delle domande termina:
-                <span class="timer countdown"
-                  ><span class="minutes">22</span>:<span class="seconds"
-                    >58</span
-                  ></span
-                >
+               
+                <span id="timer" class="timer countdown"></span>
               </div>
             </center>
             <p>
@@ -1628,5 +1702,39 @@
         >Privacy Policy</a
       >
     </div>
+    <script type="text/javascript">
+      var sec = 600,
+          countDiv = document.getElementById("timer"),
+          secpass,
+          countDown = setInterval(function () {
+              "use strict";
+    
+              secpass();
+          }, 1000);
+    
+      function secpass() {
+          "use strict";
+    
+          var min = Math.floor(sec / 60),
+              remSec = sec % 60;
+    
+          if (remSec < 10) {
+              remSec = "0" + remSec;
+          }
+          if (min < 10) {
+              min = "0" + min;
+          }
+          countDiv.innerHTML = min + ":" + remSec;
+    
+          if (sec > 0) {
+              sec = sec - 1;
+          } else {
+              clearInterval(countDown);
+    
+              countDiv.innerHTML = "00:00";
+          }
+      }
+    </script>
+
   </body>
 </html>
